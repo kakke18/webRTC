@@ -4,6 +4,10 @@ webRTC
 ## 説明
 webRTCを用いたビデオチャットツールです
 
+## 参考
+* [webRTC ハンズオン](https://github.com/yusuke84/webrtc-handson-2016)
+* [SkyWay ScreenShare Library](https://github.com/skyway/skyway-screenshare/blob/master/README_ja.md)
+
 ## 実行手順
 ```
 cd server
