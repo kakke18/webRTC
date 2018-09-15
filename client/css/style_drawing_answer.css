@@ -1,0 +1,211 @@
+/*--------------------------------------------------*/
+/*---------------------- body ----------------------*/
+/*--------------------------------------------------*/
+body {
+    background-color: rgb(114, 168, 213);
+    text-align: center;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.main_container {
+    position: relative;
+    height: 90vh;
+    width: 160vh;
+    margin: 5vh auto 0;
+}
+.sub_container {
+    position: absolute;
+    height: 90vh;
+    width: 15vh;
+    top: 0;
+    left: 100%;
+    z-index: 0;
+}
+#return_btn {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 5vh;
+    top: 5vh;
+    left: 5vh;
+    background-color: #f00;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
+    vertical-align: center;
+    z-index: 2;
+}
+#return_btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/*--------------------------------------------------*/
+/*--------------------- ビデオ ----------------------*/
+/*--------------------------------------------------*/
+video {
+    background: #000;
+    border: solid 1px #fff;
+}
+#remote_video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.menu_btn_container {
+    position: absolute;
+    height: 5%;
+    width: 40%;
+    top: 0;
+    z-index: 2;
+    background-color: #000;    
+}
+.menu_btn_container button {
+    height: 100%;
+    width: 12%;
+    background-color: #bbb;
+    color: #000;
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
+    vertical-align: center;
+}
+#drawing_btn {
+    background-color: #f00;
+    color: #fff;
+    pointer-events: none;
+}
+.menu_btn_container button:hover {
+    background-color: #13178E;
+    color: #fff;
+    cursor: pointer;
+}
+/*--------------------------------------------------*/
+/*--------------------- お絵かき ---------------------*/
+/*--------------------------------------------------*/
+canvas {
+    position: absolute;
+    height: 100%;
+    width: 95%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+canvas:hover {
+    cursor: pointer;
+}
+/*--- アイコンのスタイル ---*/
+.canvas_btn_container {
+    position: absolute;
+    height: 100%;
+    width: 5%;
+    top: 0;
+    left: 95%;
+    background-color: #f00;
+    z-index: 2;
+}
+.canvas_btn_container > button {
+    display: block;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    margin: 2vh 0;
+    background-color: #ccc;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
+    transition: .6s;
+}
+/*--- マウスオーバー ---*/
+.canvas_btn_container > button:hover {
+    cursor: pointer;
+    transform: rotateY(360deg);
+}
+/*--- カラー選択 ---*/
+.color_select_btns {
+    position: relative;
+    visibility: hidden;
+}
+.color_select_btns > button {
+    display: inline-block;
+    height: 8vh;
+    width: 8vh;
+}
+.color_select_btns > button:hover{
+    cursor: pointer;
+}
+#gray {
+    margin-top: 5%;
+    background-color: #ccc;
+}
+#black {
+    background-color: #000;
+}
+#red {
+    background-color: #f00;
+}
+#yellow {
+    background-color: #ff0;
+}
+#green {
+    background-color: #0f0;
+}
+#blue {
+    background-color: #00f;
+}
+/*--- 太さ選択 ---*/
+.resize {
+    position: relative;
+    height: 40%;
+    bottom: 40%;
+    text-align: center;
+    visibility: hidden;
+}
+#size_bar {
+    position: relative;
+    width: 200%;
+    top: 40%;
+    left: -50%;
+    transform: rotate(90deg);
+}
+#val {
+    position: relative;
+    height: 30%;
+    width: 100%;
+    top: 70%;
+    font-size: 200%;
+    border: solid 1px;
+    color: #fff;
+    background-color: #000;
+}
+/*--- 図形選択 ---*/
+.shape_select_btns {
+    position: relative;
+    bottom: 75%;
+    visibility: hidden;
+}
+.shape_select_btns > button {
+    display: inline-block;
+    height: 8vh;
+    width: 8vh;
+    margin: 2vh 0;
+}
+.shape_select_btns > button:hover {
+    background-color: #f00;
+}
+
+/*--------------------------------------------------*/
+/*-------------------- 隠し要素 ---------------------*/
+/*--------------------------------------------------*/
+#local_video, #chat_area, #chat_send, #camera_stop  {
+    display: none;
+}

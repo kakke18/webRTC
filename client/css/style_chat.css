@@ -1,0 +1,187 @@
+/*--------------------------------------------------*/
+/*---------------------- body ----------------------*/
+/*--------------------------------------------------*/
+body {
+    background-color: rgb(114, 168, 213);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.main_container {
+    position: relative;
+    height: 90vh;
+    width: 160vh;
+    margin: 5vh auto 0;
+}
+#return_btn {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 5vh;
+    top: 5vh;
+    left: 5vh;
+    background-color: #f00;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
+    vertical-align: center;
+}
+#return_btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/*--------------------------------------------------*/
+/*--------------------- ビデオ ----------------------*/
+/*--------------------------------------------------*/
+video {
+    background: #000;
+    border: solid 1px #fff;
+}
+#remote_video {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+}
+
+/*--------------------------------------------------*/
+/*------------------ メニューボタン -------------------*/
+/*--------------------------------------------------*/
+.menu_btn_container {
+    position: absolute;
+    height: 5%;
+    width: 40%;
+    top: 0%;
+    left: 10%;
+    z-index: 4;
+    /* background-color: #bbf; */
+}
+.menu_btn_container button {
+    height: 100%;
+    width: 12%;
+    background-color: #bbb;
+    color: #000;
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
+    vertical-align: center;
+}
+#chat_btn {
+    background-color: #f00;
+    color: #fff;
+    pointer-events: none;
+}
+.menu_btn_container button:hover {
+    background-color: #13178E;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------*/
+/*--------------------- チャット ---------------------*/
+/*--------------------------------------------------*/
+/*--- チャットエリア ---*/
+.chatarea {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    background-color: #eee;
+}
+/*--- タイムライン ---*/
+#chat_timeline {
+    overflow: auto;
+    height: 90%;
+    width: 100%;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    background-color: #eee;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;
+}
+/*テキスト*/
+.chat_text {
+    word-break: break-all;
+    font-size: 100%;
+    padding: 3%;
+    line-height: 100%; 
+}
+/* 左側(相手) */
+.chat_left {
+    float: left;
+    word-break: break-all;
+    width: 40%;
+    color: #333;
+    background: #fff;
+    border: 2px solid #13178E;
+    border-radius: 30px 30px 30px 0px;
+    margin: 1% 0 0 1%;
+}
+/* 右側(自分) */
+.chat_right {
+    float: right;
+    width: 40%;
+    color: #fff;
+    background: #13178E;
+    border: 2% solid #fff;
+    border-radius: 30px 30px 0px 30px;
+    margin: 1% 1% 0 0;
+}
+/* 回り込み解除 */
+.chat_clear {
+    clear: both;
+}
+
+/*--- テキストエリア&送信ボタン ---*/
+#chat_send {
+    background-color: #eee;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 10%;
+}
+/* テキストエリア */
+#chat_send_textarea{
+    width: 85%;
+    line-height: 16px;
+    height: 100%;
+    padding: 14px 6px 0px 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;
+    box-sizing: border-box;
+    font-size: 14px;
+    resize: none;
+}
+/* ボタン */
+#chat_send_btn {
+    width: 15%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 300%;
+    float: right;
+    color: #fff;
+    font-weight: bold;
+    background: #bcbcbc;
+    text-align: center;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#chat_send_btn:hover {
+    background: #13178E;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------*/
+/*-------------------- 隠し要素 ---------------------*/
+/*--------------------------------------------------*/
+#local_video, #connect_btn, canvas, .canvas_btn_container, #size_bar, .color_select_btns, #val, .shape_select_btns {
+    display: none;
+}

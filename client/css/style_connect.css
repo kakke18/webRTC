@@ -1,0 +1,72 @@
+/*--------------------------------------------------*/
+/*---------------------- body ----------------------*/
+/*--------------------------------------------------*/
+body {
+    background-color: rgb(114, 168, 213);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.main_container {
+    position: relative;
+    height: 90vh;
+    width: 160vh;
+    margin: 5vh auto 0;
+}
+
+/*--------------------------------------------------*/
+/*--------------------- ビデオ ----------------------*/
+/*--------------------------------------------------*/
+video {
+    background: #000;
+    border: solid 1px #fff;
+}
+#remote_video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+#local_video {
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    bottom: 0;
+    right: 0;
+}
+
+/*--------------------------------------------------*/
+/*------------------ メニューボタン -------------------*/
+/*--------------------------------------------------*/
+.menu_btn_container {
+    position: absolute;
+    height: 5%;
+    width: 40%;
+    top: 0; 
+    background-color: #000;    
+}
+.menu_btn_container button {
+    height: 100%;
+    width: 12%;
+    background-color: #bbb;
+    color: #000;
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
+    vertical-align: center;
+}
+.menu_btn_container button:hover {
+    background-color: #13178E;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------*/
+/*-------------------- 隠し要素 ---------------------*/
+/*--------------------------------------------------*/
+.sub_container, #connect_btn, canvas, #chat_timeline, #chat_send,.canvas_btn_container, #return_btn{
+    display: none;
+}

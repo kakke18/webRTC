@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/style_index.css" id="cs">
+    <title>WebRTC</title>
+</head>
+
+<body>
+<div class="main_container">
+    <!-- *************** ビデオ **************** -->
+    <video id="remote_video" autoplay></video>
+    <video id="local_video" autoplay></video>
+    <div class="room_name">
+        <span id="room_name_tag">ルーム名</span><input type="text" id="room_name">
+    </div>
+    <button type="button" id="connect_btn">接続</button>
+    <div class="menu_btn_container">
+        <button type="button" id="disconnect_btn">切</button>
+        <button type="button" id="video_btn">ビ</button>
+        <button type="button" id="mute_btn">消</button> 
+        <!-- <button type="button" id="mic_btn">消</button>
+        <button type="button" id="camera_switch_btn">カ</button> -->
+        <button type="button" id="chat_btn">チ</button>
+        <button type="button" id="drawing_btn">描</button>
+        <button type="button" id="white_btn">ホ</button>
+        <button type="button" id="screen_btn">画</button>
+    </div>
+    
+    <!-- ************ 描画&ホワイトボード ************ -->
+    <canvas id="canvas"></canvas>
+
+    <!-- *************** チャット *************** -->
+    <div class="chatarea">
+        <!-- タイムライン -->
+        <div id="chat_timeline"></div>
+        <!-- テキストエリア&送信ボタン -->
+        <div id="chat_send">
+            <textarea id="chat_send_textarea"></textarea>
+            <dix id="chat_send_btn">送信</dix>
+        </div>
+    </div>
+    <!-- ************* 描画メニュー ************* -->
+    <div class="canvas_btn_container">
+        <button type="button" id="color">色</button>
+        <button type="button" id="size">太</button>
+        <button type="button" id="shape">図形</button>
+        <button type="button" id="pointer">ポ</button>
+        <button type="button" id="eraser">消す</button>
+        <button type="button" id="clear">×</button>
+        <button type="button" id="camera_switch">切</button>
+        <button type="button" id="camera_stop">停</button>
+    </div>
+    <div class="sub_container">
+        <div class="color_select_btns">
+            <button type="button" id="gray"></button>
+            <button type="button" id="black"></button>
+            <button type="button" id="red"></button>
+            <button type="button" id="yellow"></button>
+            <button type="button" id="green"></button>
+            <button type="button" id="blue"></button>
+        </div>
+        <div class="resize">
+            <input type="range" id="size_bar" min="0.5" max="15" value="5" step="0.5"><span id="val">5</span>
+        </div>
+        <div class="shape_select_btns">
+            <button type="button" id="square">■</button>
+            <button type="button" id="triangle">▲</button>
+            <button type="button" id="circle">●</button>
+        </div>
+    </div>
+</div>
+<button type="button" id="return_btn">戻る</button>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+<script type="text/javascript" src="dist/screenshare.js"></script>
+<script type="text/javascript" src="webrtc.js"></script>
+
+</body>
+</html>

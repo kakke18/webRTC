@@ -1,0 +1,86 @@
+/*--------------------------------------------------*/
+/*---------------------- body ----------------------*/
+/*--------------------------------------------------*/
+body {
+    background-color: rgb(114, 168, 213);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.main_container {
+    position: relative;
+    height: 90vh;
+    width: 160vh;
+    margin: 5vh auto 0;
+}
+#return_btn {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 5vh;
+    top: 5vh;
+    left: 5vh;
+    background-color: #f00;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
+    vertical-align: center;
+}
+#return_btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/*--------------------------------------------------*/
+/*--------------------- ビデオ ----------------------*/
+/*--------------------------------------------------*/
+video {
+    background: #000;
+    border: solid 1px #fff;
+}
+#remote_video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.menu_btn_container {
+    position: absolute;
+    height: 5%;
+    width: 40%;
+    top: 0;
+    background-color: #000;
+    z-index: 1;
+}
+.menu_btn_container button {
+    height: 100%;
+    width: 12%;
+    background-color: #bbb;
+    color: #000;
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
+    vertical-align: center;
+}
+#screen_btn {
+    background-color: #f00;
+    color: #fff;
+    pointer-events: none;
+}
+.menu_btn_container button:hover {
+    background-color: #13178E;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------*/
+/*-------------------- 隠し要素 ---------------------*/
+/*--------------------------------------------------*/
+.sub_container, #connect_btn, #local_video, canvas, #chat_area, #chat_timeline, #chat_send, .canvas_btn_container {
+    display: none;
+}
