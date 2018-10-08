@@ -1,32 +1,37 @@
 webRTC
 ===
 
-## 説明
-webRTCを用いたビデオチャットツールです
+Video chat tool using webRTC
 
-## 参考
+## Reference
 * [webRTC ハンズオン](https://github.com/yusuke84/webrtc-handson-2016)
 * [SkyWay ScreenShare Library](https://github.com/skyway/skyway-screenshare/blob/master/README_ja.md)
 
-## 実行手順
+## Prepare
 ```
-cd server
-node signaling.js
-cd ../client
-(python3系)
+npm install ws express
+```
+
+## Usage
+```
+node server/signaling.js
+cd client
+(python3.x)
 python -m http.server 8000
-(python2系)
+(python2.x)
 python -m SimpleHTTPServer 8000
 ```
-ブラウザ(推奨Google chrome)でlocalhost:8000にアクセス
+Access to [http://localhost:8000](http://localhost:8000)
 
-## 開発環境
-### 言語
+※Every browser supports webRTC 1.0, but I am developing it for Chrome or Firefox
+
+## Environment
+### Languages
 * html
 * css
 * JavaScript
-### ライブラリ
+### Library
 * nodeJS
 
-## 開発者
+## Author
 [kakke18](https://github.com/kakke18)
