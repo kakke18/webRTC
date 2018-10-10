@@ -7,7 +7,7 @@ Video chat application using webRTC
 WebRTC is a technology for exchanging real-time communication on the web as is name.
 Because webRTC requires a lot of technology, many protocols are used.
 
-It is video chat application using webRTC
+It is video chat application using webRTC.
 
 This application has the following functions.
 * video and audio calls
